@@ -9,8 +9,9 @@ const client = new GoogleImages('015630691776977537564:ko5x3ez3p3i', 'AIzaSyDVLH
 app.use(express.static('public'))
 
 app.get("/images/:qs", (req, res) => {
-//   client.search(req.params.qs)
-//       .then(images => {
+   client.search(req.params.qs)
+       .then(images => {
+     res.end(imagaes[0].url);
 //         var n = 0;
 //         var img = "";
 //         var urls = [];
@@ -42,9 +43,9 @@ app.get("/images/:qs", (req, res) => {
 
 //           console.log("done");
 //           res.end("<html><head><style>img{height:100px;width:150px;margin:5px}</style></head><body>"+img+"<p>"+urls.join('<br>')+"</p><p>"+n+"</p><p>"+names.join('<br>')+"</p></body></html>");
-//         })
-//       .catch(err => console.log(err));
-  res.end("hello");
+        })
+      .catch(err => console.log(err));
+  //res.end("hello");
   //
 });
 
