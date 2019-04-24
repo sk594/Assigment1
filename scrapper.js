@@ -58,6 +58,6 @@ app.get("/images/:qs", (req, res) => {
   //
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, process.env.IP, () => {
   console.log("SERVERR IS RUNNING !!!");
 });
