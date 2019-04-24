@@ -11,7 +11,6 @@ app.use(express.static('public'))
 app.get("/images/:qs", (req, res) => {
 //   client.search(req.params.qs)
 //       .then(images => {
-//         //var imgData = [];
 //         var n = 0;
 //         var img = "";
 //         var urls = [];
@@ -41,19 +40,10 @@ app.get("/images/:qs", (req, res) => {
 //             });
 //           };
 
-
-//           //imgData.push(urls, names, img);
 //           console.log("done");
-//           //console.log(imgData.join("======="));
-
 //           res.end("<html><head><style>img{height:100px;width:150px;margin:5px}</style></head><body>"+img+"<p>"+urls.join('<br>')+"</p><p>"+n+"</p><p>"+names.join('<br>')+"</p></body></html>");
 //         })
-//       .catch(err => {
-//         if(err.statusCode == 403){
-//           res.end("Try next day.  You have exceeded the limit");
-//         }
-//         console.log(err)
-//       });
+//       .catch(err => console.log(err));
   res.end("hello");
   //
 });
